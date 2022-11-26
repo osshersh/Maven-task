@@ -1,28 +1,31 @@
 package task3;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
-    @org.junit.jupiter.api.Test
-    void sum() {
-        Assertions.assertEquals(Calculator.sum(4,4),8);
+    @Test
+    void shouldReturn8WhenAdd4and4() {
+       int value = Calculator.sum(4,4);
+       Assertions.assertEquals(8,value);
     }
 
-    @org.junit.jupiter.api.Test
-    void subtract() {
-        Assertions.assertEquals(Calculator.subtract(4,4),0);
+    @Test
+    void shouldReturn0When4Subtract4() {
+        int value = Calculator.subtract(4,4);
+        Assertions.assertEquals(0,value);
     }
 
-    @org.junit.jupiter.api.Test
-    void multiply() {
-        Assertions.assertEquals(Calculator.multiply(4,4),16);
+    @Test
+    void shouldReturn16When4Multiply4() {
+        int value = Calculator.multiply(4,4);
+        Assertions.assertEquals(16,value);
     }
 
-    @org.junit.jupiter.api.Test
-    void divide() {
+    @Test
+    void shouldReturn1When4Divide4() {
         Assertions.assertEquals(Calculator.divide(4,4),1);
     }
 }
