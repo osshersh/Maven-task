@@ -2,7 +2,7 @@ package task6;
 
 public class Calendar {
 
-    public static String showNameDayOfWeek(int day) {
+    public static String getNameDayOfWeek(int day) {
         switch (day) {
             case 1:
                 return "Monday";

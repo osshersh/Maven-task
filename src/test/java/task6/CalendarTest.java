@@ -9,11 +9,11 @@ class CalendarTest {
 
     @Test
     void shouldSayWhenNumberOfDayIsNotWeekend() {
-        String monday = Calendar.showNameDayOfWeek(1);
-        String tuesday = Calendar.showNameDayOfWeek(2);
-        String wednesday = Calendar.showNameDayOfWeek(3);
-        String thursday = Calendar.showNameDayOfWeek(4);
-        String friday = Calendar.showNameDayOfWeek(5);
+        String monday = Calendar.getNameDayOfWeek(1);
+        String tuesday = Calendar.getNameDayOfWeek(2);
+        String wednesday = Calendar.getNameDayOfWeek(3);
+        String thursday = Calendar.getNameDayOfWeek(4);
+        String friday = Calendar.getNameDayOfWeek(5);
 
         Assertions.assertEquals("Monday", monday);
         Assertions.assertEquals("Tuesday",tuesday);
@@ -24,10 +24,16 @@ class CalendarTest {
 
     @Test
     void shouldSayWhenNumberOfDayIsWeekend() {
-        String saturday = Calendar.showNameDayOfWeek(6);
-        String sunday = Calendar.showNameDayOfWeek(7);
+        String saturday = Calendar.getNameDayOfWeek(6);
+        String sunday = Calendar.getNameDayOfWeek(7);
 
         Assertions.assertEquals("Weekend",saturday);
         Assertions.assertEquals("Weekend",sunday);
+    }
+
+    @Test
+    void shouldSayWhenNumberIsNotWeek(){
+        String outRange = Calendar.getNameDayOfWeek(8);
+        Assertions.assertEquals("There is no such a day!",outRange);
     }
 }
